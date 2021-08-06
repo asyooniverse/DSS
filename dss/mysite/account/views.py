@@ -9,7 +9,6 @@ def signup(request):
         if request.POST['password'] == request.POST['confirm']:
             user = User( user_id=request.POST['username'], user_pw=request.POST['password'])
             user.save()
-            # auth.login(request, user)
             return redirect('home')
 
     return render(request, "signup.html")
