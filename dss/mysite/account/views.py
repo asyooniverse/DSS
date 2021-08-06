@@ -35,7 +35,7 @@ def login(request):
         return render(request, "login.html")
 
 
-# 로그 아웃
+# 로그아웃
 def logout(request):
     if request.method == 'POST':
         auth.logout(request)
